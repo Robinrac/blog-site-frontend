@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mitt anteckningsblock</title>
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
   <header>
@@ -18,40 +19,38 @@
     <ul id="noteList"></ul>
   </div>
 
-  <script>
+
+   <script>
     // JavaScript-kod för att hantera anteckningar
+    // Här deklarerar vi variabler för att komma åt HTML-element
     const noteList = document.getElementById('noteList');
     const noteInput = document.getElementById('note');
 
+    // Funktion för att lägga till en ny anteckning
     function addNote() {
+      // Hämta texten från textområdet
       const noteText = noteInput.value;
+      // Kontrollera om texten är tom eller bara innehåller mellanslag
       if (noteText.trim() !== '') {
+        // Skapa ett nytt listelement (li)
         const li = document.createElement('li');
+        // Sätt texten på listelementet till anteckningstexten
         li.textContent = noteText;
-        
-        const editButton = document.createElement('button');
-        editButton.textContent = 'Redigera';
-        editButton.onclick = function() {
-          const updatedNoteText = prompt('Redigera din anteckning:', noteText);
-          if (updatedNoteText !== null) {
-            li.textContent = updatedNoteText;
-            li.appendChild(editButton);
-            li.appendChild(deleteButton);
-          }
-        };
-        
-
+        // Skapa en knapp för att radera anteckningen
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Radera';
+        // Lägg till händelsehanterare för att ta bort anteckningen när knappen klickas
         deleteButton.onclick = function() {
           noteList.removeChild(li);
         };
+        // Lägg till raderingsknappen till listelementet
         li.appendChild(deleteButton);
+        // Lägg till listelementet till listan med anteckningar
         noteList.appendChild(li);
+        // Återställ textområdet
         noteInput.value = '';
       }
     }
   </script>
 </body>
 </html>
-
