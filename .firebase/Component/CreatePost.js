@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
-import db from './firebase'; // Importera din Firebase-instans
+import db from './firebase'; // Importera  Firebase-instans
 
 const CreatePost = () => {
   const [title, setTitle] = useState('');
