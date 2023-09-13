@@ -3,9 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Mitt anteckningsblock</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello</h1>
+  <header>
+    <h1>Mitt anteckningsblock</h1>
+  </header>
+  <div class="container">
+    <h2>Lägg till anteckning</h2>
+    <textarea id="note" placeholder="Skriv din anteckning här"></textarea>
+    <button onclick="addNote()">Lägg till</button>
+    <h2>Dina anteckningar</h2>
+    <ul id="noteList"></ul>
+  </div>
+
+  <script>
+    // JavaScript-kod för att hantera anteckningar
+    const noteList = document.getElementById('noteList');
+    const noteInput = document.getElementById('note');
+
+    function addNote() {
+      const noteText = noteInput.value;
+      if (noteText.trim() !== '') {
+        const li = document.createElement('li');
+        li.textContent = noteText;
+        
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Redigera';
+        editButton.onclick = function() {
+          const updatedNoteText = prompt('Redigera din anteckning:', noteText);
+          if (updatedNoteText !== null) {
+            li.textContent = updatedNoteText;
+            li.appendChild(editButton);
+            li.appendChild(deleteButton);
+          }
+        };
+        
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Radera';
+        deleteButton.onclick = function() {
+          noteList.removeChild(li);
+        };
+        li.appendChild(deleteButton);
+        noteList.appendChild(li);
+        noteInput.value = '';
+      }
+    }
+  </script>
 </body>
 </html>
+
