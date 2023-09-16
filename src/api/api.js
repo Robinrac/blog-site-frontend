@@ -1,6 +1,6 @@
 const API = process.env.API_URL;
 
-export async function getBlogPost() {
+export async function fetchBlogPost() {
     try {
       const response = await fetch(API, {
         method: 'GET',
@@ -14,4 +14,4 @@ export async function getBlogPost() {
       console.error("Error fetching blog posts:", error);
       return { error: error.message };
     }
-  }
+}
