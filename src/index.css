@@ -26,7 +26,7 @@ body {
   box-shadow: 10px 10px 35px 20px #19366d;
   display: flex;
   text-align: start;
-  min-height: 70vh;
+  max-height: 570px;
 }
 
 h1 {
@@ -103,4 +103,8 @@ input[type="submit"]:disabled{
 label, input{
   font-style: italic;
   font-weight: 500;
+}
+input{
+    margin-top: 10px;
+    height: 55px;
 }
