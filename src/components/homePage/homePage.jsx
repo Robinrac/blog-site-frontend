@@ -1,10 +1,12 @@
-const HomePage = () => {
+import React from 'react';
+import BlogPosts from "./components/BlogPosts";
 
-    return (
-        <div>
-            <blogPosts />
-        </div>
-    );
+const HomePage = () => {
+  return (
+    <div>
+      <BlogPosts />
+    </div>
+  );
 };
 
 export default HomePage;
