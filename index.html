@@ -1,56 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mitt anteckningsblock</title>
-  <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
-  <header>
-    <h1>Mitt anteckningsblock</h1>
-  </header>
-  <div class="container">
-    <h2>Lägg till anteckning</h2>
-    <textarea id="note" placeholder="Skriv din anteckning här"></textarea>
-    <button onclick="addNote()">Lägg till</button>
-    <h2>Dina anteckningar</h2>
-    <ul id="noteList"></ul>
-  </div>
-
-
-   <script>
-    // JavaScript-kod för att hantera anteckningar
-    // Här deklarerar vi variabler för att komma åt HTML-element
-    const noteList = document.getElementById('noteList');
-    const noteInput = document.getElementById('note');
-
-    // Funktion för att lägga till en ny anteckning
-    function addNote() {
-      // Hämta texten från textområdet
-      const noteText = noteInput.value;
-      // Kontrollera om texten är tom eller bara innehåller mellanslag
-      if (noteText.trim() !== '') {
-        // Skapa ett nytt listelement (li)
-        const li = document.createElement('li');
-        // Sätt texten på listelementet till anteckningstexten
-        li.textContent = noteText;
-        // Skapa en knapp för att radera anteckningen
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Radera';
-        // Lägg till händelsehanterare för att ta bort anteckningen när knappen klickas
-        deleteButton.onclick = function() {
-          noteList.removeChild(li);
-        };
-        // Lägg till raderingsknappen till listelementet
-        li.appendChild(deleteButton);
-        // Lägg till listelementet till listan med anteckningar
-        noteList.appendChild(li);
-        // Återställ textområdet
-        noteInput.value = '';
-      }
-    }
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

@@ -1,60 +1,73 @@
 import React, { useState } from 'react';
-import { collection, addDoc } from 'firebase/firestore';
-import db from './firebase'; // Importera  Firebase-instans
+//import { collection, addDoc } from 'firebase/firestore';
+//import db from './firebase'; // Importera  Firebase-instans
 
-const CreatePost = () => {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [isPending, setIsPending] = useState(false);
 
-  const date = new Date();
-  let day = date.getDate; 
-  let year = date.getFullYear;
-  let month = date.getMonth() +1;
-  let hour = date.getHours()
-  let minute = date.getMinutes(); 
+
+
+
+let date = new Date()
+let day = date.getDay()
+let month = date.getMonth() + 1
+let year = date.getFullYear()
+let hour = date.getHours()
+let minute = date.getMinutes()
 let fullDate = `${hour}:${minute} ${day}/${month}-${year}`
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+//let id = uuid()
+//console.log(uuid())
+const Create = () => {
+const[title, setTitle] = useState("");
+const[description, setDescription] = useState("");
 
-    // Lägg till inlägg i Firestore-databasen
-    try {
-      const docRef = await addDoc(collection(db, 'posts'), {
+const handleTitleChange = (e) => {
+    setTitle(e.target.value)
+}
+const handleDescriptionChange = (e) => {
+    setDescription(e.target.value)
+} 
+const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const blogDataObject = {
         title,
-        content,
-        fullDate
-      });
-
-      console.log('Inlägg skapat med ID:', docRef.id);
-      // Rensa formuläret
-      setTitle('');
-      setContent('');
-    } catch (error) {
-      console.error('Fel vid skapande av inlägg:', error);
+        description,
+        fullDate,
+        //id
     }
-  };
+    console.log(blogDataObject)
+    console.log(JSON.stringify(blogDataObject))
+}
 
-  return (
+return (
     <div>
-      <h2>Skapa ett nytt inlägg</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Rubrik"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <textarea
-          placeholder="Innehåll"
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-        />
-       {!isPending && <input  type="submit" value="Create"></input>}
-      {isPending && <input  type="submit" value="Adding blog..." disabled></input>}
-      </form>
+        <h1>Create a post</h1>
+  <div className="container">
+        <form id='create-post-form' onSubmit={handleSubmit}>
+         <label htmlFor='title'>TITLE:</label>
+         <textarea
+         name='title'
+         id='title'
+         value={title}
+         onChange={handleTitleChange}
+         cols={30}
+         rows={10}
+         required
+         ></textarea>
+         <label htmlFor='description'>DESCRIPTION:</label>
+         <textarea
+         name='description'
+         value={description}
+         onChange={handleDescriptionChange}
+         id='description'
+         cols={50}
+         rows={10}
+         ></textarea>   
+         <input type='submit' value="Create"></input>
+        </form>
+        </div>
     </div>
-  );
-};
+)
+}
 
-export default CreatePost;
+export default Create
