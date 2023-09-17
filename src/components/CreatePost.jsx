@@ -27,15 +27,16 @@ const handleDescriptionChange = (e) => {
 } 
 const handleSubmit = (e) => {
     e.preventDefault()
+    const blogData = new FormData(e.target);
+    const inputValues = [...blogData.values()];
+    console.log(inputValues)
 
-    const blogDataObject = {
-        title,
-        description,
-       // fullDate,
-        //id
-    }
+    const blogDataObject = Object.fromEntries(blogData);
     console.log(blogDataObject)
-    console.log(JSON.stringify(blogDataObject))
+  
+    
+    // console.log(blogDataObject)
+    // console.log(JSON.stringify(blogDataObject))
 }
 
 return (
