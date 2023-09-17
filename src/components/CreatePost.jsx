@@ -16,7 +16,7 @@ import React, { useState } from 'react';
 
 //let id = uuid()
 //console.log(uuid())
-const Create = () => {
+const CreatePost = () => {
 const[title, setTitle] = useState("");
 const[description, setDescription] = useState("");
 
@@ -70,4 +70,4 @@ return (
 )
 }
 
-export default Create
+export default CreatePost

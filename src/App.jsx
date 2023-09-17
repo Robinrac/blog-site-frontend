@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import CreatePost from '../Component/CreatePost'
+import CreatePost from './components/CreatePost'
+
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <CreatePost />
+      <CreatePost/>
        
       </div>
   
