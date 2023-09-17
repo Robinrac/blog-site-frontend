@@ -31,7 +31,7 @@ const handleSubmit = (e) => {
     const blogDataObject = {
         title,
         description,
-        fullDate,
+       // fullDate,
         //id
     }
     console.log(blogDataObject)
