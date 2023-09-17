@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API = process.env.API_URL
 
-export async function homePage() {
+async function blogPosts() {
     try {
         const response = await axios.get(API);
         const data = response.data;
@@ -13,3 +13,5 @@ export async function homePage() {
         return { error: error.message};
     }
 }
+
+export default blogPosts
