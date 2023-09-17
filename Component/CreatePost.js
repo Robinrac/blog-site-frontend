@@ -7,6 +7,13 @@ const CreatePost = () => {
   const [content, setContent] = useState('');
   const [isPending, setIsPending] = useState(false);
 
+  const date = new Date();
+  let day = date.getDate; 
+  let year = date.getFullYear;
+  let month = date.getMonth() +1;
+  let hour = date.getHours()
+  let minute = date.getMinutes(); 
+let fullDate = `${hour}:${minute} ${day}/${month}-${year}`
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +23,7 @@ const CreatePost = () => {
       const docRef = await addDoc(collection(db, 'posts'), {
         title,
         content,
-        timestamp: new Date(),
+        fullDate
       });
 
       console.log('Inlägg skapat med ID:', docRef.id);
