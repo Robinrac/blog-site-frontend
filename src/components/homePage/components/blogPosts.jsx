@@ -1,31 +1,31 @@
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useState, useEffect } from "react"
 
-const API = "https://fwk22-group-2-backend.up.railway.app/blogpost"
+const API = "https://fwk22-group-2-backend.up.railway.app/blogpost";
 
-async function BlogPosts() {
-    const [blog, setBlogs] = useState([]);
+function BlogPosts() {
+    const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
         const fetchBlogs = async () => {
             const response = await axios.get(API);
             const blogData = response.data;
-
-            setBlogs(blogData)
-        }
+            setBlogs(blogData);
+        };
         fetchBlogs();
     }, []);
 
     return (
+      //needs proper fix
         <div>
-          {blog.map((blog) => (
-            <div key={blog.id}>
-              <h2>{blog.title}</h2>
-              <p>{blog.description}</p>
-            </div>
-          ))}
+            {blogs.map((blog) => (
+                <div key={blog.id}>
+                    <h2>{blog.title}</h2>
+                    <p>{blog.description}</p>
+                </div>
+            ))}
         </div>
-      );
+    );
 }
 
 export default BlogPosts;
