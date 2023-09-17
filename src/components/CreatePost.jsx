@@ -6,13 +6,13 @@ import React, { useState } from 'react';
 
 
 
-let date = new Date()
-let day = date.getDay()
-let month = date.getMonth() + 1
-let year = date.getFullYear()
-let hour = date.getHours()
-let minute = date.getMinutes()
-let fullDate = `${hour}:${minute} ${day}/${month}-${year}`
+// let date = new Date()
+// let day = date.getDay()
+// let month = date.getMonth() + 1
+// let year = date.getFullYear()
+// let hour = date.getHours()
+// let minute = date.getMinutes()
+// let fullDate = `${hour}:${minute} ${day}/${month}-${year}`
 
 //let id = uuid()
 //console.log(uuid())
