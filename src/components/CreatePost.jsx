@@ -18,6 +18,7 @@ import '../index.css'
 const CreatePost = () => {
 const[title, setTitle] = useState("");
 const[description, setDescription] = useState("");
+const [isPending, setIsPending] = useState(false);
 
 const handleTitleChange = (e) => {
     setTitle(e.target.value)
@@ -25,8 +26,11 @@ const handleTitleChange = (e) => {
 const handleDescriptionChange = (e) => {
     setDescription(e.target.value)
 } 
+
+
 const handleSubmit = (e) => {
     e.preventDefault()
+    setIsPending(true)
     const blogData = new FormData(e.target);
     const inputValues = [...blogData.values()];
     console.log(inputValues)
@@ -63,8 +67,9 @@ return (
          cols={50}
          rows={10}
          ></textarea>   
-         <input type='submit' value="Create"></input>
-        </form>
+           {!isPending && <input  type="submit" value="Create"></input>}
+      {isPending && <input  type="submit" value="Adding blog..." disabled></input>}
+           </form>
         </div>
     </div>
 )
