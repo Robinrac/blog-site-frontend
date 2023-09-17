@@ -5,6 +5,7 @@ import React from 'react'
 const create = () => {
 const[title, setTitle] = useState("");
 const[description, setDescription] = useState("");
+const [isPending, setIsPending] = useState(false)
 
 const handleTitleChange = (e) => {
     setTitle(e.target.value)
@@ -26,6 +27,8 @@ const handleSubmit = (e) => {
 return (
     <div>
         <h1>Create a post</h1>
+        <div className='container'>
+
         <form id='create-post-form' onSubmit={handleSubmit}>
          <label htmlFor='title'>TITLE:</label>
          <textarea
@@ -46,8 +49,11 @@ return (
          cols={50}
          rows={10}
          ></textarea>   
-         <input type='submit' value="Create"></input>
+         {!isPending &&<input type='submit' value="Create"></input>}
+         {isPending &&<input type='submit' value="Adding blog post..."></input>}
         </form>
+         
+        </div>
     </div>
 )
 }
