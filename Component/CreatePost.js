@@ -5,6 +5,8 @@ import db from './firebase'; // Importera  Firebase-instans
 const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [isPending, setIsPending] = useState(false);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,7 +43,8 @@ const CreatePost = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <button type="submit">Skapa inlägg</button>
+       {!isPending && <input  type="submit" value="Create"></input>}
+      {isPending && <input  type="submit" value="Adding blog..." disabled></input>}
       </form>
     </div>
   );
