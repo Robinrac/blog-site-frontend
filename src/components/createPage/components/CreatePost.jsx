@@ -1,20 +1,10 @@
 import React, { useState } from 'react';
-//import { collection, addDoc } from 'firebase/firestore';
-//import db from './firebase'; // Importera  Firebase-instans
-
+import axios from 'axios';
 import '../components/index.css'
 
+const API = "https://fwk22-group-2-backend.up.railway.app/blogpost";
 
-// let date = new Date()
-// let day = date.getDay()
-// let month = date.getMonth() + 1
-// let year = date.getFullYear()
-// let hour = date.getHours()
-// let minute = date.getMinutes()
-// let fullDate = `${hour}:${minute} ${day}/${month}-${year}`
 
-//let id = uuid()
-//console.log(uuid())
 const CreatePost = () => {
 const[title, setTitle] = useState("");
 const[description, setDescription] = useState("");
@@ -28,19 +18,20 @@ const handleDescriptionChange = (e) => {
 } 
 
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault()
     setIsPending(true)
     const blogData = new FormData(e.target);
-    const inputValues = [...blogData.values()];
-    console.log(inputValues)
+    const blogDataArray = [...blogData.values()];
+    console.log(blogDataArray)
 
     const blogDataObject = Object.fromEntries(blogData);
     console.log(blogDataObject)
+
+    const response = await axios.post(API, blogDataObject)
+    .then(response => console.log(response))
+    .catch(err => console.log(err))
   
-    
-    // console.log(blogDataObject)
-    // console.log(JSON.stringify(blogDataObject))
 }
 
 return (
