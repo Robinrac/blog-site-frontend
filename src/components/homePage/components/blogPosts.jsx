@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const API = "https://fwk22-group-2-backend.up.railway.app/blogpost";
