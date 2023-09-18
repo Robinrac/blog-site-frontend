@@ -19,19 +19,26 @@ const handleDescriptionChange = (e) => {
 
 
 const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsPending(true)
-    const blogData = new FormData(e.target);
-    const blogDataArray = [...blogData.values()];
-    console.log(blogDataArray)
+    try{
+        e.preventDefault()
+      
 
-    const blogDataObject = Object.fromEntries(blogData);
-    console.log(blogDataObject)
-
-    const response = await axios.post(API, blogDataObject)
-    .then(response => console.log(response))
-    .catch(err => console.log(err))
-  
+        setIsPending(true)
+        const blogData = new FormData(e.target);
+        const blogDataArray = [...blogData.values()];
+        console.log(blogDataArray)
+        
+        const blogDataObject = Object.fromEntries(blogData);
+        console.log(blogDataObject)
+        
+         await axios.post(API, blogDataObject)
+         setTitle("");
+         setDescription("")
+        setIsPending(false)
+    }catch(error){
+        console.log(error)
+    }
+    
 }
 
 return (

@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <CreatePage/>
+      <CreatePage />
       </div>
   
   )
