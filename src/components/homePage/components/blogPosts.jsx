@@ -8,15 +8,19 @@ function BlogPosts() {
 
     useEffect(() => {
         const fetchBlogs = async () => {
-            const response = await axios.get(API);
-            const blogData = response.data;
-            setBlogs(blogData);
+            try {
+                const response = await axios.get(API);
+                const blogData = response.data;
+                console.log(blogData);
+                setBlogs(blogData.data);
+            } catch (error) {
+                console.error("Error fetching blog posts:", error);
+            }
         };
         fetchBlogs();
     }, []);
 
     return (
-      //needs proper fix
         <div>
             {blogs.map((blog) => (
                 <div key={blog.id}>
