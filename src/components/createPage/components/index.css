@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bodono Moda";
+  background: #a5d7e8;
+
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #7097debc;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 5px solid #19366d3d;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 35px 20px #19366d;
+  display: flex;
+  text-align: start;
+  max-height: 570px;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-style: italic;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+input {
+  background-color: #a5d7e86d;
+  color: black;
+  border: 2px solid #19366d8c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0px auto;
+  display: block;
+  margin: 0 auto;
+  width: 34rem;
+  height: 3rem;
+  font-size: 18px;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+input:hover {
+  background-color: #a5d7e8;
+  color: white;
+}
+
+input:active {
+  text-decoration: underline;
+}
+
+#title {
+  height: 10%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+ font-size: 25px;
+}
+
+#description {
+  height: 60%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+input:focus {
+  border-color: black;
+}
+
+input[type="submit"]:disabled{
+  background-color:#19366d8c ;
+  color: white;
+  cursor: default;
+}
+label, input{
+  font-style: italic;
+  font-weight: 500;
+}
+input{
+    margin-top: 10px;
+    height: 55px;
+}
