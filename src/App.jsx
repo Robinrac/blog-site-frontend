@@ -1,5 +1,5 @@
 import HomePage from "./components/homePage/HomePage"
-//import CreatePost from './components/CreatePost'
+import CreatePage from "./components/createPage/CreatePage"
 
 function App() {
 
