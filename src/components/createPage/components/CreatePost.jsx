@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../components/index.css'
 
 const API = "https://fwk22-group-2-backend.up.railway.app/blogpost";
-
+//check
 
 const CreatePost = () => {
 const[title, setTitle] = useState("");
