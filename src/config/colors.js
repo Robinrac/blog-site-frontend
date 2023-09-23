@@ -1,7 +1,8 @@
 const colors = {
-    BACKGROUND: "#0B2447",
-    BACKGROUND_GRADIENT: "#19376D",
-    HIGHLIGHT_ACCENT: "#A5D7E8",
+    BACKGROUND: "#ebebeb",
+    BACKGROUND_SECOND: "#0B2447",
+    BACKGROUND_THIRD: "#19376D",
+    HIGHLIGHT_ACCENT: "#cccf3e",
     PRIMARY_TEXT: "#fff",
 };
 
