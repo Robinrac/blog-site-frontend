@@ -17,7 +17,7 @@
 .blog-item {
     width: 25%;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #0B2447;
     text-align: left;
     margin: 30px;
     padding: 20px;
@@ -32,7 +32,7 @@
 }
 
 h2, p {
-    color: black;
+    color: #fff;
 }
 
 h2 {
@@ -58,7 +58,8 @@ h2 {
 .read-more-button {
     border: none;
     color: white;
-    background-color: #A5D7E8;
+    background-color: #cccf3e;
+    border-radius: 10px;
     height: 50px;
     width: 150px;
     font-size: 22px;
