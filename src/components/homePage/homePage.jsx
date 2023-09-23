@@ -1,10 +1,10 @@
 import BlogPosts from "./components/BlogPosts";
-import HomeHeader from "./components/homeHeader";
+import HomeHero from "./components/homeHeader";
 
 const HomePage = () => {
   return (
     <div>
-      <HomeHeader />
+      <HomeHero />
       <BlogPosts />
     </div>
   );
