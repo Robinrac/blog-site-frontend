@@ -1,8 +1,8 @@
 const colors = {
-    BACKGROUND: "#ebebeb",
-    BACKGROUND_SECOND: "#0B2447",
-    BACKGROUND_THIRD: "#19376D",
-    HIGHLIGHT_ACCENT: "#cccf3e",
+    BACKGROUND: "#ebebeb", //white/grey background color
+    BACKGROUND_SECOND: "#0B2447", //darker blue color
+    BACKGROUND_THIRD: "#19376D", //dark but lighter blue color
+    HIGHLIGHT_ACCENT: "#cccf3e", //Yellow accent color
     PRIMARY_TEXT: "#fff",
 };
 
