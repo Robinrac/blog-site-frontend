@@ -27,8 +27,8 @@
 }
 
 .blog-item:hover {
-    transform: translateY(-5px);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #f6f6f6;
 }
 
 h2, p {

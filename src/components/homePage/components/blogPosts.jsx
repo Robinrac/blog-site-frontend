@@ -21,6 +21,13 @@ function BlogPosts() {
         fetchBlogs();
     }, []);
 
+    const handleNavigateButton = (blogId) => {
+        const newPageUrl = `/blog/${blogId}`;
+        
+        console.log(newPageUrl)
+        window.location.href = newPageUrl; //comment this row out to see output of ID
+      };
+
     return (  
         <div className="blog-area">
             <div className="blog-container">
@@ -28,10 +35,10 @@ function BlogPosts() {
                 <div key={blog.id} className="blog-item">
                     <h2>{blog.title}</h2>
                     {/* <p>{blog.date}</p> */}
-                    <p id="title-date">2023/8/31</p> {/* placeholder */}
+                    <p id="title-date">2023/8/31</p> {/* placeholder until i can get blog.date from api*/} 
                     <p>{blog.description}</p>
                     <div className="read-more-container">
-                        <button className="read-more-button">Read More</button>
+                        <button className="read-more-button" onClick={() => handleNavigateButton(blog.id)}>Read More</button>
                     </div>
                 </div>
             ))}
