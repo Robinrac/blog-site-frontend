@@ -1,5 +1,5 @@
 import BlogPosts from "./components/BlogPosts";
-import HomeHero from "./components/homeHeader";
+import HomeHero from "./components/HomeHero";
 
 const HomePage = () => {
   return (
