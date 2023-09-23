@@ -15,21 +15,24 @@
 }
 
 .blog-item {
-    width: 25%;
-    margin-bottom: 20px;
-    background-color: #3862cf;
+    width: 20%;
+    background-color: #0063A2;
     text-align: left;
-    margin: 30px;
+    margin-bottom: 40px;
     padding: 20px;
     height: 400px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+.blog-item:nth-child(even) {
+    background-color: #015588;
+  }
+
 .blog-item:hover {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-    background-color: #f6f6f6;
+    transform: scale(1.07);
 }
+
 
 h2, p {
     color: #fff;
@@ -37,12 +40,12 @@ h2, p {
 
 h2 {
     font-size: 40px;
-    margin-top: -5px;
+    margin-top: 10px;
     font-weight: bold;
 }
 
 #title-date {
-    color: grey;
+    color: rgb(206, 206, 206);
     font-size: 13px;
     margin-top: -25px;
 }
@@ -57,9 +60,9 @@ h2 {
 
 .read-more-button {
     border: none;
-    color: white;
+    color: black;
     background-color: #cccf3e;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 50px;
     width: 150px;
     font-size: 22px;
