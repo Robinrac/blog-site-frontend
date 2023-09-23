@@ -15,18 +15,17 @@
 }
 
 .blog-item {
-    width: 20%;
-    background-color: #0063A2;
+    width: 30%;
+    background-color: #015588;
     text-align: left;
-    margin-bottom: 40px;
+    margin-top: -70px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 90px;
     padding: 20px;
     height: 400px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
-.blog-item:nth-child(even) {
-    background-color: #015588;
-  }
 
 .blog-item:hover {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);

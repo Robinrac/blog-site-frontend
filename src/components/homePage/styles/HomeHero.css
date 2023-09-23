@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap");
 
 .hero {
-    background: linear-gradient(to left, #0B2447, #19376D);
+    height: 500px;
+    background: #0063A2;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 40vh;
+    font-size: 80px;
+    text-decoration-line:underline;
 }
