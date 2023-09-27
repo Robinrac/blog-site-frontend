@@ -1,4 +1,4 @@
-import BlogPosts from "./components/BlogPosts";
+import BlogPosts from "./components/blogPosts";
 import HomeHero from "./components/HomeHero";
 
 const HomePage = () => {
