@@ -3,7 +3,7 @@ import axios from 'axios';
 import './styles/index.css'
 import { useNavigate } from "react-router-dom";
 import CreateHero from './CreateHero';
-
+import CreateNavBar from './CreateNavBar';
 
 
 const API = "https://fwk22-group-2-backend.up.railway.app/blogpost";
@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
 
 return (
     <div>
-     
+     <CreateNavBar />
     <CreateHero />
   <div className="container">
         <form id='create-post-form' onSubmit={handleSubmit}>
