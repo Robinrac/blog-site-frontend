@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './styles/index.css'
 import { useNavigate } from "react-router-dom";
-
+import CreateHero from './CreateHero';
 
 
 
@@ -52,7 +52,7 @@ const handleSubmit = async (e) => {
 return (
     <div>
      
-    
+    <CreateHero />
   <div className="container">
         <form id='create-post-form' onSubmit={handleSubmit}>
          <label htmlFor='title'>TITLE:</label>
