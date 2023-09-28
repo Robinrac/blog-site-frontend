@@ -41,7 +41,7 @@ const handleSubmit = async (e) => {
          setTitle("");
          setDescription("")
         setIsPending(false)
-        navigate('/blog')
+        navigate('/')
         
     }catch(error){
         console.log(error)
