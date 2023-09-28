@@ -3,11 +3,11 @@ import createHero from './styles/createHero.css'
 
 function CreateHero() {
   return (
-    <div className="hero">
-      <div className="hero-content">
-        <h1 className="hero-title">Create a new blog post</h1>
-        <p className="hero-subtitle">"Explore the freedom of fully expressing yourself."</p>
-        <p className="hero-subtitle-1">This is absolutley the first ever website where you can do so...</p>
+    <div className="create-hero">
+      <div className="create-hero-content">
+        <h1 className="create-hero-title">Create a new blog post</h1>
+        <p className="create-hero-subtitle">"Explore the freedom of fully expressing yourself."</p>
+        <p className="create-hero-subtitle-1">This is absolutley the first ever website where you can do so...</p>
       </div>
     </div>
   );

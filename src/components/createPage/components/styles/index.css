@@ -26,7 +26,7 @@ body {
   box-shadow: 10px 10px 35px 20px #19366d;
   display: flex;
   text-align: start;
-  max-height: 570px;
+  max-height: 440px;
 }
 
 h1 {
@@ -105,6 +105,6 @@ label, input{
   font-weight: 500;
 }
 input{
-    margin-top: 10px;
-    height: 55px;
+   
+    height: 13%;
 }
