@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap");
+
+.navigation {
+    background-color: #4a9fbcc2;
+   height: 3.0rem;
+   border-bottom: 1px solid white;
+}
+
+.nav-bar{
+   
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-item{
+    float:right;
+    background-color: rgba(30, 57, 112, 0.819);
+    margin: 0.3% 3% 0% 3%; 
+    border: 1px solid white;
+    border-radius: 2px;
+
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: white;
+    font-family: "Bodono Moda";
+    font-size: 2.0rem;
+    padding: 2px 35px 0px 35px;
+    border: 1px solid white;
+    border-radius: 35%;
+    cursor: pointer;
+   
+}
+
+.nav-item a:hover{
+    text-decoration: underline;
+    color: rgba(255, 252, 252, 0.792);
+}
+
