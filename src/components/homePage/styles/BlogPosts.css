@@ -2,6 +2,7 @@
     font-family: "Bodoni Moda", serif;
     background: #ebebeb;
     padding: 20px;
+    background: #8da3d66f;
 }
 
 .blog-container {
@@ -15,7 +16,7 @@
 
 .blog-item {
     flex: 0 0 calc(33% - 20px);
-    background-color: #015588;
+    background-color: #023454;
     text-align: left;
     margin: 20px 0;
     padding: 20px;
@@ -24,6 +25,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     position: relative;
+    border: 1px solid white;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 

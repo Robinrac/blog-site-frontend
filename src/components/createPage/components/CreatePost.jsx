@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import '../components/index.css'
+import './styles/index.css'
+import { useNavigate } from "react-router-dom";
+import CreateHero from './CreateHero';
+import CreateNavBar from './CreateNavBar';
+
 
 const API = "https://fwk22-group-2-backend.up.railway.app/blogpost";
 //check
@@ -9,6 +13,7 @@ const CreatePost = () => {
 const[title, setTitle] = useState("");
 const[description, setDescription] = useState("");
 const [isPending, setIsPending] = useState(false);
+const navigate = useNavigate();
 
 
 const handleTitleChange = (e) => {
@@ -36,6 +41,8 @@ const handleSubmit = async (e) => {
          setTitle("");
          setDescription("")
         setIsPending(false)
+        navigate('/')
+        
     }catch(error){
         console.log(error)
     }
@@ -44,7 +51,8 @@ const handleSubmit = async (e) => {
 
 return (
     <div>
-        <h1>Create a post</h1>
+     <CreateNavBar />
+    <CreateHero />
   <div className="container">
         <form id='create-post-form' onSubmit={handleSubmit}>
          <label htmlFor='title'>TITLE:</label>
@@ -70,7 +78,8 @@ return (
       {isPending && <input  type="submit" value="Adding blog..." disabled></input>}
            </form>
         </div>
-    </div>
+        </div>
+    
 )
 }
 
