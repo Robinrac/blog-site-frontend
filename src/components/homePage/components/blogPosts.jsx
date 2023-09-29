@@ -28,14 +28,19 @@ function BlogPosts() {
         window.location.href = newPageUrl; //comment this row out to see output of ID
       };
 
+      function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+        const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
+        return formattedDate;
+      }
+
     return (  
         <div className="blog-area">
             <div className="blog-container">
             {blogs.map((blog) => (
                 <div key={blog.id} className="blog-item">
                     <h2>{blog.title}</h2>
-                    {/* <p>{blog.date}</p> */}
-                    <p id="title-date">2023/8/31</p> {/* placeholder until i can get blog.date from api*/} 
+                    <p>{formatDate(blog.date)}</p>
                     <p>{blog.description}</p>
                     <div className="read-more-container">
                         <button className="read-more-button" onClick={() => handleNavigateButton(blog.id)}>Read More</button>
