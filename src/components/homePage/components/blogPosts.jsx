@@ -21,12 +21,17 @@ function BlogPosts() {
         fetchBlogs();
     }, []);
 
-    const handleNavigateButton = (blogId) => {
+    /*const handleNavigateButton = (blogId) => {
         const newPageUrl = `/blog/${blogId}`;
         
         console.log(newPageUrl)
         window.location.href = newPageUrl; //comment this row out to see output of ID
-      };
+      };*/
+      const handleNavigateButton = (blogId, title, description) => {
+  const newPageUrl = `/blog/${blogId}?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
+  window.location.href = newPageUrl;
+};
+
 
       function formatDate(dateString) {
         const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
