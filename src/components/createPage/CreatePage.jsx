@@ -1,4 +1,3 @@
-
 import CreatePost from "./components/CreatePost";
 
 const CreatePage = () => {
