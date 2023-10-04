@@ -4,6 +4,7 @@ import axios from "axios";
 import BlogPosts from "./src/components/homePage/components/blogPosts";
 
 jest.mock("axios");
+//test
 
 describe("BlogPosts Component", () => {
   const mockData = {
