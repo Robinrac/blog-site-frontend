@@ -4,8 +4,6 @@ import { useLocation } from "react-router-dom";
 function BlogPostDetail() {
   const location = useLocation();
   const { title, description } = location.state || {};
- 
-
   return (
     <div>
       <h2>{title || "Title Not Found"}</h2>
