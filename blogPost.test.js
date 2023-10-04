@@ -4,7 +4,7 @@ import axios from "axios";
 import BlogPosts from "./src/components/homePage/components/blogPosts";
 
 jest.mock("axios");
-//test
+//för att lägga till rätt trello id
 
 describe("BlogPosts Component", () => {
   const mockData = {
