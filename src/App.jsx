@@ -6,7 +6,8 @@ import HomePage from './components/homePage/homePage';
 import BlogPostDetail from './components/blogPostPage/components/blogPostDetail';
 
 function App() {
- return
+ 
+ return (
  <Router>
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -15,7 +16,8 @@ function App() {
 
     </Routes>
   </Router>
-);
+)
+
 }
 
 export default App
